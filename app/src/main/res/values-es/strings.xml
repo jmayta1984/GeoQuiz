@@ -2,10 +2,10 @@
     <string name="app_name">GeoQuiz</string>
     <string name="question">¿Es Lima la capital de Perú?</string>
 
-    <string name="bt_yes">Yes</string>
+    <string name="bt_yes">Si</string>
     <string name="bt_no">No</string>
-    <string name="bt_next">Next</string>
-    <string name="bt_previous">Previous</string>
+    <string name="bt_next">Siguiente</string>
+    <string name="bt_previous">Anterior</string>
 
 
 </resources>

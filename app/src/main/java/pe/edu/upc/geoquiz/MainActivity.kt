@@ -25,6 +25,9 @@ class MainActivity : AppCompatActivity() {
         question = Question("¿Es Budapest la capital de Hungría?", true)
         questions.add(question)
 
+        question = Question("¿Es Bógota la capital de Argentina?", false)
+        questions.add(question)
+
     }
 
     private fun setupViews() {
@@ -40,7 +43,12 @@ class MainActivity : AppCompatActivity() {
         }
 
         btNext.setOnClickListener {
-            position++
+            position = (position + 1) % questions.size
+            showSentence()
+        }
+
+        btPrevious.setOnClickListener {
+            position--
             showSentence()
         }
     }
