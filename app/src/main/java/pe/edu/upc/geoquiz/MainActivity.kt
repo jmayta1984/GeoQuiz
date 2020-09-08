@@ -48,17 +48,17 @@ class MainActivity : AppCompatActivity() {
         }
 
         btPrevious.setOnClickListener {
-            position--
+            position = (questions.size + position - 1) % questions.size
             showSentence()
         }
     }
 
     private fun validateAnswer(option: Boolean) {
         if (questions[position].answer == option) {
-            Toast.makeText(this, "Correcto", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, R.string.correct, Toast.LENGTH_SHORT).show()
 
         } else {
-            Toast.makeText(this, "Incorrecto", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, R.string.incorrect, Toast.LENGTH_SHORT).show()
         }
     }
 
